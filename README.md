@@ -1,20 +1,9 @@
 # employee-attrition-prediction
+---
 A machine learning project to predict employee attrition
+---
 # Employee Attrition Prediction
 This project uses machine learning to predict employee attrition using HR data.
-## Project Structure
-
-
-## Dataset
-
-# 🧠 Employee Attrition Prediction
-
-This machine learning project predicts whether an employee is likely to leave the company based on HR data. The project applies classification techniques to assist HR departments in proactively identifying and retaining valuable talent.
----
-## 🎯 Objective
-
-To build a predictive model that identifies employees at risk of attrition using various features such as overtime, job role, income, and job satisfaction.
----
 
 ## 📁 Dataset
 
