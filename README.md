@@ -1,27 +1,19 @@
 # employee-attrition-prediction
 A machine learning project to predict employee attrition
 # Employee Attrition Prediction
-
 This project uses machine learning to predict employee attrition using HR data.
-
 ## Project Structure
 
-- `data/`: Dataset files
-- `notebooks/`: Exploratory data analysis and model development
-- `src/`: Python scripts and functions
 
 ## Dataset
 
 # 🧠 Employee Attrition Prediction
 
 This machine learning project predicts whether an employee is likely to leave the company based on HR data. The project applies classification techniques to assist HR departments in proactively identifying and retaining valuable talent.
-
 ---
-
 ## 🎯 Objective
 
 To build a predictive model that identifies employees at risk of attrition using various features such as overtime, job role, income, and job satisfaction.
-
 ---
 
 ## 📁 Dataset
@@ -31,49 +23,66 @@ To build a predictive model that identifies employees at risk of attrition using
 - **Target Variable**: `Attrition` (Yes/No)
 
 ---
+# Employee Attrition Prediction
 
-## 🧪 Methodology
+This project aims to predict employee attrition using machine learning techniques. The notebook demonstrates the complete process from data preparation to advanced modeling and interpretability using SHAP values.
 
-### 1. Data Preparation
-- Cleaned and transformed the `Attrition` target into binary values (`0 = No`, `1 = Yes`)
-- One-hot encoded categorical variables
-- Checked for class imbalance
+## 📊 Project Objective
 
-### 2. Modeling
-- **Logistic Regression** (baseline)
-- **Random Forest Classifier** with:
-  - Class balancing (`class_weight='balanced'`)
-  - Hyperparameter tuning using **GridSearchCV**
+To build a classification model that predicts whether an employee will leave the company based on features such as age, income, job role, and work conditions.
 
-### 3. Evaluation
-- Metrics: Accuracy, Precision, Recall, F1-score, Confusion Matrix
-- Feature Importance Plot
+## 🔄 Workflow
 
----
+1. **Data Cleaning**
+   - Removed missing values
+   - Encoded categorical variables using OneHotEncoder and LabelEncoder
+   - Scaled numerical features
 
-## 📈 Results
+2. **Exploratory Data Analysis**
+   - Visualized relationships between attrition and key variables
+   - Identified imbalances in the target variable
 
-- Best Model: Random Forest (tuned with GridSearchCV)
-- Accuracy : ~87%
-- **Challenge: Low recall for the minority class (`Attrition = Yes`)
-- Key Predictors:
-  - `OverTime`
-  - `JobRole`
-  - `MonthlyIncome`
-  - `Age`
+3. **Feature Engineering**
+   - Selected relevant features using domain knowledge and SHAP
+   - Addressed class imbalance using SMOTE
 
----
+4. **Modeling**
+   - Trained multiple models: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting
+   - Evaluated using Accuracy, Precision, Recall, F1 Score, and ROC AUC
 
-## 📊 Feature Importance (Top 10)
+5. **Model Explainability**
+   - Used SHAP to understand the impact of each feature on predictions
 
-> A horizontal bar chart was created using `best_model.feature_importances_` to show the top 10 predictors driving attrition.
+## 📌 Key Features Used
 
----
-## Technologies Used
+- OverTime
+- Monthly Income
+- Job Role
+- Age
+- Years at Company
+
+## 🏆 Best Model
+
+- **Gradient Boosting Classifier**
+  - Provided the best balance between performance metrics and interpretability
+
+## 📁 Files
+
+- `employee_attrition_model.ipynb`: Jupyter notebook with all code and analysis
+- `README.md`: Project summary and documentation
+
+## 💻 Tools & Libraries
 
 - Python
-- Pandas, NumPy
-- Scikit-learn
-- Jupyter Notebooks
-- Author
-Hilena Amare Tadesse 
+- pandas, numpy
+- matplotlib, seaborn
+- scikit-learn
+- imbalanced-learn
+- SHAP
+
+## 🚀 How to Run
+
+1. Clone this repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
